@@ -56,7 +56,7 @@
 		const raw = location.search.substring(2);
 		const words = raw.split("/");
 		const element = document.getElementById("name");
-		if (words.length === 0) {
+		if (raw.length === 0 || words.length === 0) {
 			element.style.display = "none";
 		} else {
 			element.innerHTML = words.join(" ") + "!";
