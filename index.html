@@ -54,7 +54,7 @@
 	</div>
 	<script>
 		const raw = location.search.substring(2);
-		const words = raw.split("/");
+		const words = raw.replaceAll("%20", "/").split("/");
 		const element = document.getElementById("name");
 		if (raw.length === 0 || words.length === 0) {
 			element.style.display = "none";
