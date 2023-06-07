@@ -55,7 +55,12 @@
 	<script>
 		const raw = location.search.substring(2);
 		const words = raw.split("/");
-		document.getElementById("name").innerHTML = words.join(" ") + "!";
+		const element = document.getElementById("name");
+		if (words.length === 0) {
+			element.style.display = "none";
+		} else {
+			element.innerHTML = words.join(" ") + "!";
+		}
 	</script>
 </body>
 <style>
